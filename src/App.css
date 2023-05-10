@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+/* body{
+    min-height: 100vh;
+    background: url(../public/images/bg.jpg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+*{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main{
+    padding: 10px;
+    max-width: 700px;
+    margin:0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+}
+header a{
+    text-decoration: none;
+    color: inherit;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header nav{
+    display: flex;
+    gap: 15px;
+
 }
 
-.App-link {
-  color: #61dafb;
+header .navbar ul li{
+    list-style: none;
+    position: relative;
+    float: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    color: #333;
+    display: block;
+
+}
+
+header .navbar ul li a:hover{
+    background: #333;
+    color: #fff;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+
+}
+
+header .navbar ul li ul li{
+    width:100%;
+    border-top: 1px solid rgba(0,0,0,1);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display:initial;
+}
+div.post{
+    display: grid; 
+    grid-template-columns: .9fr 1.1fr;
+    gap:20px
+}
+/* div.post img{
+    display: flex;    */
+
+div.post div.text h2{
+margin: 0;
+font-size: 1.6rem;
+}
+
+div.post p.info{
+    margin:10px 0;
+    color: #888;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+
+} 
+
+div.post p.info a.author{
+    color: #333; 
+}
+
+div.post p.descrip{
+    margin:10px 0;
+    line-height: 1.4rem;
+}
+form.login, form.register{
+    max-width: 400px;
+    margin: 0 auto;
+}
+input{
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+button{
+    width:50px;
+    display: block;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+form {
+    background-color: aquamarine;
+    box-sizing: border-box;  
+}
+
+container{
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+div.post-page div.image{
+    max-height:300px;
+    display: flex;
+    overflow:hidden;
+}
+div.post-page div.image img{
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+}
+div.post-page a{
+    color:#333;
+    text-decoration: underline;
+}
+div.post-page h1{
+    text-align: center;
+    margin: 10px 0 5px;
+}
+div.post-page time{
+    text-align: center;
+    display: block;
+    font-size:1rem;
+    color:#aaa;
+    margin: 10px 0;
+}
+div.post-page div.author{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: .7rem;
+    font-weight: bold;
+}
+div.content p{
+    line-height: 1.7rem;
+    margin: 30px 0;
+}
+div.content li{
+    margin-bottom: 10px;
+}
+div.edit-row{
+    text-align: center;
+    margin-bottom: 20px;
+}
+div.post-page a.edit-btn{
+    background-color: #333;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    padding:15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+a svg{
+    height:20px;
 }
